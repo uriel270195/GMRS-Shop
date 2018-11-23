@@ -1,0 +1,38 @@
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  <p class="blanco">Iniciar Sesión</p>
+
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto">
+    </ul>
+    <ion-buttons slot="end">
+      <ion-button routerLink="/home" mat-raised-button class="blanco">
+        Regresar
+      </ion-button>
+    </ion-buttons>
+  </div>
+</nav>
+
+
+<ion-content padding>
+  <div class="horizontal-container centrar">
+    <div class="horizontal-container centrar contorno">
+      <img matTooltip="icon" src="http://www.accessories-india.com/images/login1.png" width="100" height="100">
+
+
+      <mat-form-field class="example-full-width">
+        <textarea matInput placeholder="Usuario" [(ngModel)]="user"></textarea>
+      </mat-form-field>
+
+
+      <div class="example-container">
+        <mat-form-field matTooltip="password">
+          <input matInput placeholder="Contraseña" [type]="hide ? 'password' : 'text'" [(ngModel)]="pass">
+          <mat-icon matSuffix (click)="hide = !hide">{{hide ? 'visibility' : 'visibility_off'}}</mat-icon>
+        </mat-form-field>
+      </div>
+
+
+      <ion-button class="blue-full" (click)="acceder()">Iniciar Sesión</ion-button>
+    </div>
+  </div>
+</ion-content>

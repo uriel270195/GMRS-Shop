@@ -1,0 +1,7 @@
+{
+  "name": "GMRS-Ventas",
+  "integrations": {
+    "cordova": {}
+  },
+  "type": "angular"
+}
