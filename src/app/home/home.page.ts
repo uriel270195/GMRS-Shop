@@ -9,7 +9,5 @@ import { ModalController } from '@ionic/angular';
 export class HomePage {
   constructor(public modalController: ModalController) {}
 
-  login(){
-  }
 
 }
