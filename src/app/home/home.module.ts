@@ -8,9 +8,8 @@ import { HomePage } from './home.page';
 
 //import { MatButtonModule, MatIconModule } from '@angular/material';
 import {MatTooltipModule} from '@angular/material/tooltip';
-import { FooterComponent } from '../footer/footer.component';
-import { NavbarComponent } from '../navbar/navbar.component';
 import { BodyIfForComponent } from '../body-if-for/body-if-for.component';
+// import { NavbarComponent } from '../navbar/navbar.component';
 
 @NgModule({
   imports: [
@@ -27,7 +26,7 @@ import { BodyIfForComponent } from '../body-if-for/body-if-for.component';
     //MatIconModule,
     MatTooltipModule
   ],
-  declarations: [HomePage, FooterComponent, NavbarComponent, BodyIfForComponent],
-  exports:[FooterComponent, NavbarComponent, BodyIfForComponent]
+  declarations: [HomePage, BodyIfForComponent],//, NavbarComponent],
+  exports:[ BodyIfForComponent]//, NavbarComponent]
 })
 export class HomePageModule {}
