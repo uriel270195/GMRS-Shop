@@ -1,0 +1,14 @@
+<div class="card animated fadeIn fast">
+    <!-- los corchetes de src significa que angular tendra manipulacion de este atributo
+es por eso que ya no se pone {{}}  para heroe.img-->
+    <img class="card-img-top img-fluid" [src]="heroe.img" [alt]="heroe.nombre">
+    <div class="card-body">
+        <h5 class="card-title">{{ heroe.nombre }}</h5>
+        <p class="card-text">{{ heroe.bio }}}</p>
+        <p class="card-text"><small class="text-muted">{{heroe.aparicion}}</small></p>
+        <!-- una manera de hacer -->
+        <button (click)="verHeroe(ind)" type="button" class="btn btn-outline-primary btn-block">Ver más...</button>
+        <!-- segunda manera de hacer -->
+        <!-- <a [routerLink]="['/heroe', ind]" class="btn btn-outline-primary">Ver más link...</a> -->
+    </div>
+</div>

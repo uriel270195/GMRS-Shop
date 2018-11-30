@@ -5,16 +5,14 @@ import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-heroes',
-  templateUrl: './heroes.component.html',
-  styleUrls: ['./heroes.component.scss']
+  templateUrl: './heroes.component.html'
 })
 export class HeroesComponent implements OnInit {
 
     heroes: Iheroes[] = [];
   constructor(private _heroesService: HeroesService,
               private _router: Router
-    ) {
-   }
+    ) { }
 
   ngOnInit() {
   this.heroes = this._heroesService.getHeroes();

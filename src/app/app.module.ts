@@ -18,9 +18,11 @@ import { FooterComponent } from './footer/footer.component';
 // servicios
 import { HeroesService } from './service/heroes.service';
 import { HeroeComponent } from './heroe/heroe.component';
+import { BusquedaHeroesComponent } from './busqueda-heroes/busqueda-heroes.component';
+import { TarjetaHeroeComponent } from './tarjeta-heroe/tarjeta-heroe.component';
 
 @NgModule({
-  declarations: [AppComponent, HeroesComponent, AboutComponent, HomeHeroesComponent, NavbarComponent, FooterComponent, HeroeComponent],
+  declarations: [AppComponent, HeroesComponent, AboutComponent, HomeHeroesComponent, NavbarComponent, FooterComponent, HeroeComponent, BusquedaHeroesComponent, TarjetaHeroeComponent],
   entryComponents: [],
   imports: [RouterModule, BrowserModule, IonicModule.forRoot(), MatSelectModule, AppRoutingModule, 
     BrowserAnimationsModule, MatButtonModule, MatCheckboxModule],

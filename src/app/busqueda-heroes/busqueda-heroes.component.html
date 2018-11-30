@@ -1,0 +1,18 @@
+<div>
+    <h1>{{heroes.length}} Héroe{{ prural }} Encontrado{{ prural }} <small>Marvel y DC</small></h1>
+    <hr>
+
+    <div class="row animated fadeIn fast" *ngIf="heroes.length==0">
+        <div class="col-md-12">
+            <div class="alert alert-info" role="alert">
+                No exiten resultados para el término: {{termino}}
+            </div>
+        </div>
+    </div>
+
+    <div class="card-columns">
+
+        <app-tarjeta-heroe [heroe]="heroe" [index]="ind" *ngFor="let heroe of heroes let ind=index"></app-tarjeta-heroe>
+
+    </div>
+</div>
