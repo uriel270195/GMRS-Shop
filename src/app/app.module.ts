@@ -14,13 +14,20 @@ import { AboutComponent } from './about/about.component';
 import { HomeHeroesComponent } from './home-heroes/home-heroes.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import { FooterComponent } from './footer/footer.component';
+
+// servicios
+import { HeroesService } from './service/heroes.service';
+import { HeroeComponent } from './heroe/heroe.component';
+
 @NgModule({
-  declarations: [AppComponent, HeroesComponent, AboutComponent, HomeHeroesComponent, NavbarComponent, FooterComponent],
+  declarations: [AppComponent, HeroesComponent, AboutComponent, HomeHeroesComponent, NavbarComponent, FooterComponent, HeroeComponent],
   entryComponents: [],
-  imports: [RouterModule, BrowserModule, IonicModule.forRoot(), MatSelectModule, AppRoutingModule, BrowserAnimationsModule, MatButtonModule, MatCheckboxModule],
+  imports: [RouterModule, BrowserModule, IonicModule.forRoot(), MatSelectModule, AppRoutingModule, 
+    BrowserAnimationsModule, MatButtonModule, MatCheckboxModule],
   providers: [
     StatusBar,
     SplashScreen,
+    HeroesService,
     { provide: RouteReuseStrategy, useClass: IonicRouteStrategy }
   ],
   bootstrap: [AppComponent],
