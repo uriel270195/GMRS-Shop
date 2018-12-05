@@ -1,5 +1,5 @@
 export interface Iheroes {
-    ind: number;
+    id?: number;
     nombre: string;
     bio: string;
     img: string;
