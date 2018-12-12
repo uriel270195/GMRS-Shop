@@ -5,6 +5,7 @@ import { AboutComponent } from './about/about.component';
 import { HomeHeroesComponent } from './home-heroes/home-heroes.component';
 import { HeroeComponent } from './heroe/heroe.component';
 import { BusquedaHeroesComponent } from './busqueda-heroes/busqueda-heroes.component';
+import { PipeComponent } from './pipe/pipe.component';
 
 const routes: Routes = [
   { path: '', redirectTo: 'home', pathMatch: 'full' },
@@ -15,6 +16,7 @@ const routes: Routes = [
   { path: 'heroes', component: HeroesComponent },
   { path: 'heroe/:id', component: HeroeComponent },
   { path: 'busquedaHeroes/:nombre', component: BusquedaHeroesComponent },
+  { path: 'pipes', component: PipeComponent },
 ];
 
 @NgModule({
