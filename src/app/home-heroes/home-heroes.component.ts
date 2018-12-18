@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { AppComponent } from '../app.component';
 
 @Component({
   selector: 'app-home-heroes',
@@ -6,7 +7,9 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HomeHeroesComponent implements OnInit {
 
-  constructor() { }
+  constructor(private appComponent:AppComponent) { 
+    this.appComponent.cabioNavBar(true);
+  }
 
   ngOnInit() {
   }

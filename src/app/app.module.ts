@@ -33,6 +33,9 @@ import { PipeComponent } from './pipe/pipe.component';
 import { CapitalizadoPipe } from './pipes/capitalizado.pipe';
 import { DomseguroPipe } from './pipes/domseguro.pipe';
 import { ContrasenaPipe } from './pipes/contrasena.pipe';
+import { SpotyappComponent } from './spotyapp/spotyapp.component';
+import { NavbarSpotyappComponent } from './navbar-spotyapp/navbar-spotyapp.component';
+import { NavbarService } from './service/navbar.service';
 
 registerLocaleData(localeEs);
 @NgModule({
@@ -48,7 +51,9 @@ registerLocaleData(localeEs);
                  TarjetaHeroeComponent,
                  PipeComponent,
                  DomseguroPipe,
-                 ContrasenaPipe],
+                 ContrasenaPipe,
+                 SpotyappComponent,
+                 NavbarSpotyappComponent],
   entryComponents: [],
   imports: [RouterModule, BrowserModule, IonicModule.forRoot(), MatSelectModule, AppRoutingModule,
     BrowserAnimationsModule, MatButtonModule, MatCheckboxModule],
@@ -56,6 +61,7 @@ registerLocaleData(localeEs);
     StatusBar,
     SplashScreen,
     HeroesService,
+    NavbarService,
     { provide: RouteReuseStrategy, useClass: IonicRouteStrategy },
     //applica el formato de las fechas en español
     { provide: LOCALE_ID, useValue: 'es' }

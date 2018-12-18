@@ -1,5 +1,6 @@
 <ion-header>
-    <app-navbar></app-navbar>
+    <app-navbar *ngIf="activadoNavbar"></app-navbar>
+    <app-navbar-spotyapp *ngIf="!activadoNavbar"></app-navbar-spotyapp>
 </ion-header>
 <ion-content>
     <div class="main-container">

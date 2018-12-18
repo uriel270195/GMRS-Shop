@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { AppComponent } from '../app.component';
 
 @Component({
   selector: 'app-pipe',
@@ -6,6 +7,9 @@ import { Component } from '@angular/core';
   styleUrls: ['./pipe.component.scss']
 })
 export class PipeComponent {
+  constructor(private appComponent:AppComponent){
+    this.appComponent.cabioNavBar(true);
+  }
   nombre = 'Irvin Uriel';
   nombre2 = 'irVIn uRiEl agUilAr cOsMe';
 
