@@ -5,7 +5,6 @@ import { SplashScreen } from "@ionic-native/splash-screen/ngx";
 import { StatusBar } from "@ionic-native/status-bar/ngx";
 import { enableProdMode } from "@angular/core";
 import { Router } from "@angular/router";
-import { NavbarService } from './service/navbar.service';
 enableProdMode();
 @Component({
   selector: "app-root",
@@ -19,7 +18,6 @@ export class AppComponent implements OnInit {
     private platform: Platform,
     private splashScreen: SplashScreen,
     private statusBar: StatusBar,
-    private _statusNabVar: NavbarService
   ) {
     this.initializeApp();
   }
@@ -34,7 +32,7 @@ export class AppComponent implements OnInit {
   ngOnInit() {
     setTimeout(() => {
       this.cabioNavBar(false);
-    }, 0);
+    }, 0); 
   }
 
   cabioNavBar(desactivar: boolean) {

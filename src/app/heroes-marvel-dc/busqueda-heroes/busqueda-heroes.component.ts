@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import { HeroesService } from '../service/heroes.service';
+import { HeroesService } from '../../service/heroes.service';
 import { ActivatedRoute, Router } from '@angular/router';
-import { Iheroes } from '../interfaces/iheroes';
+import { Iheroes } from '../../interfaces/iheroes';
 
 @Component({
   selector: 'app-busqueda-heroes',

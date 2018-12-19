@@ -1,7 +1,7 @@
 import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
-import { Iheroes } from '../interfaces/iheroes';
+import { Iheroes } from '../../interfaces/iheroes';
 import { Router } from '@angular/router';
-import { HeroesService } from '../service/heroes.service';
+import { HeroesService } from '../../service/heroes.service';
 
 @Component({
   selector: 'app-tarjeta-heroe',

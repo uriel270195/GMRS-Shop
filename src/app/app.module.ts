@@ -9,9 +9,9 @@ import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatButtonModule, MatCheckboxModule } from '@angular/material';
 import {MatSelectModule} from '@angular/material/select';
-import { HeroesComponent } from './heroes/heroes.component';
-import { AboutComponent } from './about/about.component';
-import { HomeHeroesComponent } from './home-heroes/home-heroes.component';
+import { HeroesComponent } from './heroes-marvel-dc/heroes/heroes.component';
+import { AboutComponent } from './heroes-marvel-dc/about/about.component';
+import { HomeHeroesComponent } from './heroes-marvel-dc/home-heroes/home-heroes.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import { FooterComponent } from './footer/footer.component';
 
@@ -24,18 +24,17 @@ import { LOCALE_ID } from '@angular/core';
 
 // servicios
 import { HeroesService } from './service/heroes.service';
-import { HeroeComponent } from './heroe/heroe.component';
-import { BusquedaHeroesComponent } from './busqueda-heroes/busqueda-heroes.component';
-import { TarjetaHeroeComponent } from './tarjeta-heroe/tarjeta-heroe.component';
+import { HeroeComponent } from './heroes-marvel-dc/heroe/heroe.component';
+import { BusquedaHeroesComponent } from './heroes-marvel-dc/busqueda-heroes/busqueda-heroes.component';
+import { TarjetaHeroeComponent } from './heroes-marvel-dc/tarjeta-heroe/tarjeta-heroe.component';
 import { PipeComponent } from './pipe/pipe.component';
 
 //pipes
 import { CapitalizadoPipe } from './pipes/capitalizado.pipe';
 import { DomseguroPipe } from './pipes/domseguro.pipe';
 import { ContrasenaPipe } from './pipes/contrasena.pipe';
-import { SpotyappComponent } from './spotyapp/spotyapp.component';
+import { SpotyappComponent } from './spoty-app/spotyapp/spotyapp.component';
 import { NavbarSpotyappComponent } from './navbar-spotyapp/navbar-spotyapp.component';
-import { NavbarService } from './service/navbar.service';
 
 registerLocaleData(localeEs);
 @NgModule({
@@ -61,7 +60,6 @@ registerLocaleData(localeEs);
     StatusBar,
     SplashScreen,
     HeroesService,
-    NavbarService,
     { provide: RouteReuseStrategy, useClass: IonicRouteStrategy },
     //applica el formato de las fechas en español
     { provide: LOCALE_ID, useValue: 'es' }
