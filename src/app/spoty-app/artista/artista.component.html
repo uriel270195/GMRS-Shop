@@ -34,7 +34,7 @@
                 <tr *ngFor="let track of topTracks">
                     <th> <img [src]="track.album.images | noimage" class="img-thumb"> </th>
                     <th> {{track.album.name}} </th>
-                    <th> {{track.uri}}</th>
+                    <th> {{track.name}}</th>
                     <th>
                         <!-- <audio [src]="track.preview_url" controls></audio> -->
                         <iframe [src]="track.uri | slice:14 | domseguro:'https://open.spotify.com/embed/track/'" width="300" height="80" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
