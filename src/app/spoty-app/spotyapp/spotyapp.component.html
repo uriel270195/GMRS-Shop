@@ -1,3 +1,15 @@
-<p>
-    Este es el componente de spoty app
-</p>
+<app-loading *ngIf="loading"></app-loading>
+
+<div *ngIf="error" class="alert alert-danger animated fadeIn">
+    <h3>Error</h3>
+    <p>
+        {{mensajeError}}
+    </p>
+</div>
+<div *ngIf="error" class="text-center text-right">
+    <button (click)="generarToken()" class="btn btn-outline-danger">
+    Generar Token de una hora
+  </button>
+</div>
+
+<app-artist-target [items]="nuevasCansiones"></app-artist-target>

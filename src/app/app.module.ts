@@ -31,10 +31,12 @@ import { PipeComponent } from './pipe/pipe.component';
 
 //pipes
 import { CapitalizadoPipe } from './pipes/capitalizado.pipe';
-import { DomseguroPipe } from './pipes/domseguro.pipe';
 import { ContrasenaPipe } from './pipes/contrasena.pipe';
-import { SpotyappComponent } from './spoty-app/spotyapp/spotyapp.component';
 import { NavbarSpotyappComponent } from './navbar-spotyapp/navbar-spotyapp.component';
+
+//Peticiones APIS
+import { HttpClientModule } from "@angular/common/http";
+import { SpotyAppModule } from './spoty-app/spotyapp/spotyapp.module';
 
 registerLocaleData(localeEs);
 @NgModule({
@@ -49,13 +51,11 @@ registerLocaleData(localeEs);
                  BusquedaHeroesComponent,
                  TarjetaHeroeComponent,
                  PipeComponent,
-                 DomseguroPipe,
                  ContrasenaPipe,
-                 SpotyappComponent,
                  NavbarSpotyappComponent],
   entryComponents: [],
-  imports: [RouterModule, BrowserModule, IonicModule.forRoot(), MatSelectModule, AppRoutingModule,
-    BrowserAnimationsModule, MatButtonModule, MatCheckboxModule],
+  imports: [RouterModule, HttpClientModule, BrowserModule, IonicModule.forRoot(), MatSelectModule, AppRoutingModule,
+    BrowserAnimationsModule, MatButtonModule, MatCheckboxModule, SpotyAppModule],
   providers: [
     StatusBar,
     SplashScreen,

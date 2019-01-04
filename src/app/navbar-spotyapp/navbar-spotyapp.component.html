@@ -1,7 +1,7 @@
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-    <a class="navbar-brand" routerLink="/home"><img src="../../assets/img/A-64.png" width="30" height="30" alt=""></a>
+    <a class="navbar-brand" routerLink="/spotyApp"><img src="../../assets/img/banner-ico.png" width="30" height="30" alt=""></a>
 
-    <a class="navbar-brand" routerLink="/home">spotyapp-gmrs</a>
+    <a class="navbar-brand" routerLink="/spotyApp">spotyapp-gmrs</a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
@@ -9,8 +9,13 @@
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav mr-auto">
             <li class="nav-item" routerLinkActive="active">
-                <!--                                                       true= invierte los navbar -->
-                <a class="nav-link" routerLink="/home">gmrs - shop <span class="sr-only">(current)</span></a>
+                <a class="nav-link" routerLink="/spotyApp/home">home</a>
+            </li>
+            <li class="nav-item" routerLinkActive="active">
+                <a class="nav-link" routerLink="/spotyApp/search">search</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" routerLink="/home">gmrs - shop</a>
             </li>
         </ul>
     </div>

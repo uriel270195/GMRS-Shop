@@ -21,11 +21,50 @@ footer {
 }
 
 body {
-    padding-bottom: 125px;
+    padding-bottom: 99px;
+}
+
+.background {
+    --background: black !important;
+    --color: white !important;
+    margin-left: -20px;
+    margin-top: -20px;
+}
+
+.letrasNegritas {
+    color: black;
+}
+
+.letrasBlanco {
+    color: white;
+}
+
+.masters {
+    background-color: green;
 }
 
 .img-logo {
     width: 120px;
+}
+
+.puntero {
+    cursor: pointer;
+}
+
+.image-circle {
+    border-radius: 100%;
+    width: 150px;
+    border: 3px solid #ddd;
+    padding: 3px;
+}
+
+.image-circle:hover {
+    box-shadow: 0 0 3px 3px rgba(243, 4, 4, 0.788);
+}
+
+.img-thumb {
+    width: 50px;
+    height: 50px;
 }
 
 // ANIMACIONES
