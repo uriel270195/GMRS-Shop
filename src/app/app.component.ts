@@ -13,6 +13,7 @@ enableProdMode();
 export class AppComponent implements OnInit {
   activadoNavbar;
   statusNabVar: boolean;
+  quitarNavBar: boolean;
   constructor(
     private _router: Router,
     private platform: Platform,
@@ -35,10 +36,13 @@ export class AppComponent implements OnInit {
     }, 0); 
   }
 
-  cabioNavBar(desactivar: boolean) {//true acturva nav bar principal y false activa navbar sopty app
+  cabioNavBar(desactivar: boolean) {//true activa nav bar principal y false activa navbar sopty app
     this.activadoNavbar=true;
+    this.quitarNavBar=true;
     //-------------------------0,9 es para verificar que la ruta sea spotyapp para activar el navbar
     if(this._router.url.substr(0,9) === '/spotyApp')
       this.activadoNavbar=desactivar;
+    if(this._router.url.substr(0,9) === '/deseos')
+      this.quitarNavBar=false;
   }
 }

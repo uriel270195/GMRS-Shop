@@ -1,5 +1,5 @@
 <ion-header>
-    <app-navbar *ngIf="activadoNavbar"></app-navbar>
+    <app-navbar *ngIf="activadoNavbar && quitarNavBar"></app-navbar>
     <app-navbar-spotyapp *ngIf="!activadoNavbar"></app-navbar-spotyapp>
 </ion-header>
 <ion-content class="background">
@@ -7,4 +7,4 @@
         <router-outlet></router-outlet>
     </div>
 </ion-content>
-<app-footer></app-footer>
+<app-footer *ngIf="quitarNavBar"></app-footer>

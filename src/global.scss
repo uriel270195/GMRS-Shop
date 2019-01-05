@@ -20,7 +20,7 @@ footer {
     margin: 20px;
 }
 
-body {
+.body {
     padding-bottom: 99px;
 }
 
@@ -29,6 +29,10 @@ body {
     --color: white !important;
     margin-left: -20px;
     margin-top: -20px;
+}
+
+.fondoblanco {
+    background-color: white;
 }
 
 .letrasNegritas {

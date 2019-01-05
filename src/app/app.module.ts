@@ -37,6 +37,7 @@ import { NavbarSpotyappComponent } from './navbar-spotyapp/navbar-spotyapp.compo
 //Peticiones APIS
 import { HttpClientModule } from "@angular/common/http";
 import { SpotyAppModule } from './spoty-app/spotyapp/spotyapp.module';
+import { DeseosComponent } from './ionic/deseos/deseos.component';
 
 registerLocaleData(localeEs);
 @NgModule({
@@ -52,7 +53,8 @@ registerLocaleData(localeEs);
                  TarjetaHeroeComponent,
                  PipeComponent,
                  ContrasenaPipe,
-                 NavbarSpotyappComponent],
+                 NavbarSpotyappComponent,
+                 DeseosComponent],
   entryComponents: [],
   imports: [RouterModule, HttpClientModule, BrowserModule, IonicModule.forRoot(), MatSelectModule, AppRoutingModule,
     BrowserAnimationsModule, MatButtonModule, MatCheckboxModule, SpotyAppModule],
