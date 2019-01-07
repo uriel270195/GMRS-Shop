@@ -6,7 +6,6 @@ import { HomeHeroesComponent } from './heroes-marvel-dc/home-heroes/home-heroes.
 import { HeroeComponent } from './heroes-marvel-dc/heroe/heroe.component';
 import { BusquedaHeroesComponent } from './heroes-marvel-dc/busqueda-heroes/busqueda-heroes.component';
 import { PipeComponent } from './pipe/pipe.component';
-import { DeseosComponent } from './ionic/deseos/deseos.component';
 
 const routes: Routes = [
   { path: '', redirectTo: 'home', pathMatch: 'full' },
@@ -19,8 +18,8 @@ const routes: Routes = [
   { path: 'busquedaHeroes/:nombre', component: BusquedaHeroesComponent },
   { path: 'pipes', component: PipeComponent },
   { path: 'spotyApp', loadChildren: './spoty-app/spotyapp/spotyapp.module#SpotyAppModule' },
-  { path: 'deseos', component: DeseosComponent },
-  // { path: '**', redirectTo: 'home', pathMatch: 'full' },
+  { path: 'deseos', loadChildren: './ionic/deseos/deseos.module#DeseosPageModule' },
+  { path: '**', redirectTo: 'home', pathMatch: 'full' },
 ];
 
 @NgModule({

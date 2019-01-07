@@ -5,9 +5,9 @@ import { AppComponent } from '../../app.component';
   selector: 'app-deseos',
   templateUrl: './deseos.component.html',
 })
-export class DeseosComponent {
+export class DeseosComponent{
 
-  constructor(private appComponent:AppComponent) { 
+  constructor(private appComponent:AppComponent) {
     this.appComponent.cabioNavBar(false);
   }
 

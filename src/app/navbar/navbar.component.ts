@@ -1,22 +1,23 @@
 import { Component, OnInit, EventEmitter, Output } from '@angular/core';
-import { HeroesService } from '../service/heroes.service';
 import { Router } from '@angular/router';
+import { AppComponent } from '../app.component';
 
 @Component({
   selector: 'app-navbar',
   templateUrl: './navbar.component.html',
   styleUrls: ['./navbar.component.scss']
 })
-export class NavbarComponent implements OnInit {
+export class NavbarComponent {
   @Output() desactivarNavBar: EventEmitter<boolean>;
-  constructor(private _router: Router) {
+  constructor(private _router: Router, private appComponent:AppComponent) {
     this.desactivarNavBar = new EventEmitter();
    }
-
-  ngOnInit() {
-  }
   buscarHeroe(termino: string) {
     this._router.navigate(['/busquedaHeroes', termino]);
+  }
+  deseos(){
+    this.appComponent.cabioNavBar(false);
+    this._router.navigate(['/deseos/home']);
   }
 
   desactivar(desactivarNavBar: boolean){

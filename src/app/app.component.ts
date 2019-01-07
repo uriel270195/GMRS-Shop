@@ -42,7 +42,8 @@ export class AppComponent implements OnInit {
     //-------------------------0,9 es para verificar que la ruta sea spotyapp para activar el navbar
     if(this._router.url.substr(0,9) === '/spotyApp')
       this.activadoNavbar=desactivar;
-    if(this._router.url.substr(0,9) === '/deseos')
+    if(this._router.url.substr(0,7) === '/deseos')
       this.quitarNavBar=false;
+      console.log(this._router.url.substr(0,9));
   }
 }
