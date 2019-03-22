@@ -6,6 +6,8 @@ import { DeseosComponent } from './deseos.component';
 import { ROUTES } from '../deseos/deseos.routes';
 import { RouterModule } from '@angular/router';
 import { PendientesComponent } from '../pendientes/pendientes.component';
+import { TerminadosComponent } from '../terminados/pendientes.component';
+import { AgregarComponent } from '../agregar/agregar.component';
 
 @NgModule({
   imports: [
@@ -14,6 +16,7 @@ import { PendientesComponent } from '../pendientes/pendientes.component';
     FormsModule,
     RouterModule.forChild(ROUTES),
   ],
-  declarations: [DeseosComponent, PendientesComponent],
+  declarations: [DeseosComponent, PendientesComponent, TerminadosComponent, AgregarComponent],
+  entryComponents: [DeseosComponent,PendientesComponent,TerminadosComponent,AgregarComponent]
 })
 export class DeseosPageModule {}

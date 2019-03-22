@@ -6,9 +6,15 @@ import { AppComponent } from '../../app.component';
   templateUrl: './deseos.component.html',
 })
 export class DeseosComponent{
-
+  page=false;
   constructor(private appComponent:AppComponent) {
     this.appComponent.cabioNavBar(false);
+  }
+
+  showHome(){
+    this.page = false;
+    console.log("joñ");
+    
   }
 
 }

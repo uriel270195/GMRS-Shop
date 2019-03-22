@@ -37,6 +37,7 @@ import { NavbarSpotyappComponent } from './navbar-spotyapp/navbar-spotyapp.compo
 //Peticiones APIS
 import { HttpClientModule } from "@angular/common/http";
 import { SpotyAppModule } from './spoty-app/spotyapp/spotyapp.module';
+import { DeseosService } from './service/deseos.service';
 
 registerLocaleData(localeEs);
 @NgModule({
@@ -62,6 +63,7 @@ registerLocaleData(localeEs);
     StatusBar,
     SplashScreen,
     HeroesService,
+    DeseosService,
     { provide: RouteReuseStrategy, useClass: IonicRouteStrategy },
     //applica el formato de las fechas en español
     { provide: LOCALE_ID, useValue: 'es' }

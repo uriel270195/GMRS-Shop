@@ -3,14 +3,18 @@
 <ion-tabs>
     <ion-tab tab="home">
         <ion-content>
-            <app-pendientes></app-pendientes>
+            <app-pendientes [page]="page"></app-pendientes>
         </ion-content>
     </ion-tab>
-    <ion-tab tab="settings">Settings Content</ion-tab>
+    <ion-tab tab="settings">
+        <ion-content>
+            <app-terminados></app-terminados>
+        </ion-content>
+    </ion-tab>
 
-    <ion-tab-bar slot="bottom">
+    <ion-tab-bar slot="bottom" color="primary">
 
-        <ion-tab-button tab="home">
+        <ion-tab-button tab="home" (click)="showHome()">
             <ion-label>Home</ion-label>
             <ion-icon name="home"></ion-icon>
             <ion-badge>6</ion-badge>
